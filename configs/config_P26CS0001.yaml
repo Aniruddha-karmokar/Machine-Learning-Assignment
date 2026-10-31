@@ -1,0 +1,44 @@
+student:
+  name: "Aniruddha Karmokar"
+  roll_number: "P26CS0001"
+  seed: 260001
+
+dataset:
+  name: "fetch_olivetti_faces"
+  n_identities: 40
+  images_per_identity: 10
+  image_shape: [64, 64]
+  n_features: 4096
+  split_per_identity:
+    train: 6
+    val: 2
+    test: 2
+  mask_box:
+    row_start: 24
+    row_end_inclusive: 39
+    col_start: 24
+    col_end_inclusive: 39
+
+q1_decision_tree_and_bagging:
+  max_depth_grid: [2, 4, 8, 16, null]
+  min_samples_leaf_grid: [1, 2, 4]
+  selected_frozen_tree:
+    max_depth: 16
+    min_samples_leaf: 1
+  bagging_B_grid: [1, 5, 10, 25, 50, 100, 200]
+  selected_final_B: 100
+
+q2_multiclass_boosting:
+  algorithm: "SAMME"
+  n_classes: 40
+  weak_learner_depth_grid: [1, 2, 3, 4]
+  rounds_grid: [10, 25, 50, 100]
+  selected_boosting_model:
+    max_depth: 4
+    n_rounds: 50
+
+q3_bias_variance:
+  n_repetitions: 30
+  resample_per_identity: 6
+  depth_study_grid: [4, 16, null]
+  bagging_trees_in_depth_study: 100
