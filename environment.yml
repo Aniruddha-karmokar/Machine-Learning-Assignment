@@ -1,0 +1,12 @@
+name: ml-assign2-p26cs0001
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy>=1.26
+  - scipy>=1.11
+  - scikit-learn>=1.4
+  - matplotlib>=3.8
+  - pandas>=2.1
+  - pyyaml>=6.0
